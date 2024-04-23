@@ -45,7 +45,8 @@ def compo_detection(input_img_path, output_root, uied_params,
     ip_root = file.build_directory(pjoin(output_root, "ip"))
 
     # *** Step 1 *** pre-processing: read img -> get binary map
-    org, grey = pre.read_img(input_img_path, resize_by_height)
+    # org, grey = pre.read_img(input_img_path, resize_by_height)
+    org, grey = pre.read_img(input_img_path)
     binary = pre.binarization(org, grad_min=int(uied_params['min-grad']))
 
     # *** Step 2 *** element detection

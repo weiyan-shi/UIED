@@ -86,4 +86,4 @@ if __name__ == '__main__':
             name = input_path_img.split('/')[-1][:-4]
             compo_path = pjoin(output_root, 'ip', str(name) + '.json')
             ocr_path = pjoin(output_root, 'ocr', str(name) + '.json')
-            merge.merge(input_path_img, compo_path, ocr_path, output_root=None, is_remove_top=key_params['remove-top-bar'], show=True, wait_key=10)
+            merge.merge(input_path_img, compo_path, ocr_path, output_root=None, is_remove_top=key_params['remove-top-bar'], show=False, wait_key=10)
